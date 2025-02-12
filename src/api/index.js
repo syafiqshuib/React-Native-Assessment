@@ -56,21 +56,21 @@ export const fetchDataSearchApi = async ({ query, language, sort, order }) => {
 
 const handleApiError = (error) => {
     if (error.response) {
-        console.error("API Error Resp data:", error.response.data);
-        console.error("API Error Resp status:", error.response.status);
-        console.error("API Error Resp headers:", error.response.headers);
+        // console.error("API Error Resp data:", error.response.data);
+        // console.error("API Error Resp status:", error.response.status);
+        // console.error("API Error Resp headers:", error.response.headers);
         return {
             success: false,
             message: error.response.data.message,
         };
     } else if (error.request) {
-        console.error("API No Resp:", error.request);
+        // console.error("API No Resp:", error.request);
         return {
             success: false,
             message: "No response from the server.",
         };
     } else {
-        console.error("API Request err:", error.message);
+        // console.error("API Request err:", error.message);
         return {
             success: false,
             message: error.message,

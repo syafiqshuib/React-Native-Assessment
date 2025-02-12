@@ -7,6 +7,7 @@ import SplashScreen from '../screens/SplashScreen';
 import MainScreen from '../screens/MainScreen';
 import MainDetailScreen from '../screens/MainDetailScreen';
 import { Color } from '../contants/Color';
+import WentWrongScreen from '../screens/WentWrongScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,11 @@ const App = () => (
                         options={{
                             title: "",
                         }}
+                    />
+                    <Stack.Screen
+                        name="WentWrong"
+                        component={WentWrongScreen}
+                        options={{ headerShown: false }}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

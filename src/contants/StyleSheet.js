@@ -193,5 +193,42 @@ export const mainStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
+    safeAreaViewStyle: {
+        flex: 1,
+        backgroundColor: Color.white,
+    },
+    mainViewStyle: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 16
+    },
+    textStyle: {
+        fontSize: 18,
+        marginBottom: 10,
+        color: 'black',
+        fontWeight: 'bold',
+    },
+    textStyle2: {
+        fontSize: 15,
+        color: 'black',
+        textAlign: 'center'
+    },
+    tryBtnStyle: {
+        backgroundColor: Color.main,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        marginTop: 40,
+        width: 'auto'
+    },
+    tryTextBtnStyle: {
+        color: Color.white,
+        fontSize: 15,
+        fontWeight: '500',
+        paddingHorizontal: 40
+    },
 })
 

@@ -1,6 +1,7 @@
 import { call, put, takeLatest, select, delay } from "redux-saga/effects";
 import { fetchDataApi, fetchDataSearchApi } from "../api";
 import { fetchDataSuccess, fetchDataFailure, fetchDataSearchSuccess, fetchDataSearchFailure } from "../redux/actions/mainAction";
+import { replace } from "../navigation/NavigationService";
 
 function* fetchDataSaga({ payload }) {
   const { sort, direction } = payload;
@@ -11,7 +12,8 @@ function* fetchDataSaga({ payload }) {
     if (response.success) {
       yield put(fetchDataSuccess(response.data));
     } else {
-      console.error("Fetch Data Error:", response.message);
+      // console.error("Fetch Data Error:", response.message);
+      replace('WentWrong');
       yield put(fetchDataFailure(response.message));
     }
   } catch (error) {
@@ -27,7 +29,8 @@ function* fetchDataSearchSaga({ payload }) {
     if (response.success) {
       yield put(fetchDataSearchSuccess(response.data));
     } else {
-      console.error("Fetch Data Search Error:", response.message);
+      // console.error("Fetch Data Search Error:", response.message);
+      replace('WentWrong');
       yield put(fetchDataSearchFailure(response.message));
     }
   } catch (error) {
